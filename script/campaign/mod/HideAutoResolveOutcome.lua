@@ -4,11 +4,11 @@
 -- Credit Ares106 for letting me use his code from the successor: Ares's remove Auto-resolve Outcome
 
 function setOutcomeInvisible()
-    -- gets UI Component by means of the uicomponent tree
+    -- gets UI Component by means of the uicomponent tree. See: https://chadvandy.github.io/tw_modding_resources/WH3/campaign/global.html#function:global:find_uicomponent
     local autoresolve_outcome = find_uicomponent(core:get_ui_root(), "popup_pre_battle", "mid", "battle_deployment",
         "regular_deployment", "list", "autoresolve_outcome")
 
-    -- if it is actually an uicomponent we set it invisible with the provided CA lua method
+    -- if it is actually an uicomponent we set it invisible
     if is_uicomponent(autoresolve_outcome) then
         autoresolve_outcome:SetVisible(false)
     end
